@@ -12,248 +12,141 @@
         theme: {
           extend: {
             "colors": {
-                    "on-tertiary": "#502400",
                     "surface-variant": "#343535",
-                    "error": "#ffb4ab",
-                    "on-primary-fixed": "#001a42",
-                    "on-tertiary-fixed-variant": "#723600",
-                    "on-secondary-fixed-variant": "#474746",
-                    "on-primary-container": "#00285d",
-                    "surface-container-highest": "#343535",
-                    "surface-container-high": "#292a2a",
-                    "tertiary": "#ffb786",
-                    "on-secondary-container": "#b7b4b4",
-                    "inverse-surface": "#e3e2e2",
-                    "secondary-fixed-dim": "#c8c6c5",
-                    "secondary-fixed": "#e5e2e1",
-                    "secondary": "#c8c6c5",
-                    "on-primary-fixed-variant": "#004395",
-                    "on-primary": "#002e6a",
-                    "inverse-on-surface": "#2f3131",
-                    "outline": "#8c909f",
-                    "on-secondary-fixed": "#1c1b1b",
-                    "on-error": "#690005",
-                    "primary-container": "#4d8eff",
-                    "on-secondary": "#313030",
-                    "surface": "#121414",
-                    "secondary-container": "#474746",
-                    "primary": "#adc6ff",
-                    "surface-bright": "#38393a",
-                    "inverse-primary": "#005ac2",
-                    "surface-container": "#1e2020",
-                    "on-surface-variant": "#c2c6d6",
-                    "on-error-container": "#ffdad6",
-                    "tertiary-fixed": "#ffdcc6",
-                    "tertiary-container": "#df7412",
                     "on-surface": "#e3e2e2",
-                    "surface-tint": "#adc6ff",
-                    "surface-container-low": "#1a1c1c",
-                    "on-background": "#e3e2e2",
-                    "surface-container-lowest": "#0d0e0f",
-                    "primary-fixed-dim": "#adc6ff",
-                    "outline-variant": "#424754",
-                    "tertiary-fixed-dim": "#ffb786",
-                    "surface-dim": "#121414",
-                    "primary-fixed": "#d8e2ff",
+                    "primary": "#adc6ff",
                     "background": "#121414",
-                    "error-container": "#93000a",
-                    "on-tertiary-fixed": "#311400",
-                    "on-tertiary-container": "#461f00"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
+                    "outline-variant": "#424754"
             },
             "spacing": {
                     "margin-mobile": "16px",
-                    "unit": "4px",
                     "stack-md": "16px",
                     "stack-sm": "8px",
                     "gutter": "24px",
                     "stack-lg": "32px",
                     "margin-desktop": "40px",
                     "container-max": "1200px"
-            },
-            "fontFamily": {
-                    "headline-lg": ["Geist", "Inter", "sans-serif"],
-                    "headline-lg-mobile": ["Geist", "Inter", "sans-serif"],
-                    "display": ["Geist", "Inter", "sans-serif"],
-                    "body-sm": ["Geist", "Inter", "sans-serif"],
-                    "mono": ["JetBrains Mono", "monospace"],
-                    "headline-md": ["Geist", "Inter", "sans-serif"],
-                    "body-lg": ["Geist", "Inter", "sans-serif"],
-                    "label-caps": ["Geist", "Inter", "sans-serif"]
-            },
-            "fontSize": {
-                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "600"}],
-                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}],
-                    "body-sm": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
-                    "mono": ["13px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
-                    "headline-md": ["20px", {"lineHeight": "1.4", "letterSpacing": "-0.02em", "fontWeight": "500"}],
-                    "body-lg": ["16px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
-                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
             }
-          },
-        },
+          }
+        }
       }
     </script>
 <style>
-        body {
-            background-color: #000000;
-            color: #e3e2e2;
-            -webkit-font-smoothing: antialiased;
+        body { background-color: #000000; color: #e3e2e2; -webkit-font-smoothing: antialiased; }
+        .glass-nav { backdrop-filter: blur(12px); background: rgba(0, 0, 0, 0.7); }
+        .hero-glow { background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 70%); }
+        .map-container {
+            position: relative;
+            background: #1a1c1c;
+            border-radius: 1rem;
+            padding: 2rem;
+            overflow: hidden;
+            border: 1px solid rgba(173, 198, 255, 0.1);
         }
-        .glass-nav {
-            backdrop-filter: blur(12px);
-            background: rgba(0, 0, 0, 0.7);
+        .city-dot {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #adc6ff;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #adc6ff;
         }
-        .readme-content h1 { @apply font-headline-lg text-headline-lg mb-stack-lg border-b border-outline-variant/30 pb-stack-sm; }
-        .readme-content h2 { @apply font-headline-md text-headline-md mt-stack-lg mb-stack-md; }
-        .readme-content p { @apply font-body-lg text-body-lg mb-stack-md text-on-surface-variant; }
-        .readme-content code { @apply font-mono text-mono bg-surface-container-high px-2 py-1 rounded-lg text-primary; }
-        .readme-content pre { @apply bg-surface-container-lowest border border-outline-variant/30 p-stack-md rounded-xl overflow-x-auto mb-stack-md; }
-        .readme-content ul { @apply list-disc list-inside mb-stack-md space-y-2 text-on-surface-variant; }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
+        .city-label {
+            position: absolute;
+            color: #adc6ff;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-
-        .hero-glow {
-            background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+        .connector {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, #adc6ff, transparent);
+            height: 2px;
+            opacity: 0.3;
+            animation: pulse 3s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 0.1; }
         }
     </style>
 </head>
-<body class="font-body-lg">
-<!-- TopNavBar -->
+<body class="font-sans">
 <header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
 <div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-16">
-<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">
-                Nicolás Roa
-            </div>
-<nav class="hidden md:flex gap-stack-lg">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Inicio</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="index.html#experience">Experiencia</a>
-<a class="font-label-caps text-label-caps text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="index.html#projects">Proyectos</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="index.html#contact">Contacto</a>
+<div class="text-xl font-bold tracking-tighter text-on-surface">Nicolás Roa</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-sm uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Inicio</a>
+<a class="text-sm uppercase tracking-widest text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="index.html#projects">Proyectos</a>
 </nav>
-<button class="bg-primary text-on-primary-fixed font-label-caps text-label-caps px-stack-md py-stack-sm rounded hover:opacity-90 active:scale-95 transition-all">
-                Contratame
-            </button>
 </div>
 </header>
-<main class="pt-32 pb-stack-lg">
-<!-- Hero Section -->
+<main class="pt-32 pb-16">
 <section class="max-w-container-max mx-auto px-margin-desktop mb-24 hero-glow">
-<div class="flex flex-col md:flex-row gap-stack-lg items-start">
+<div class="flex flex-col md:flex-row gap-12 items-start">
 <div class="flex-1">
-<div class="flex items-center gap-stack-sm mb-stack-md">
-<span class="bg-surface-container-high text-primary font-label-caps text-label-caps px-3 py-1 rounded-full uppercase">Caso de Estudio</span>
-<span class="text-on-surface-variant/50">•</span>
-<span class="text-on-surface-variant font-body-sm text-body-sm">Publicado Oct 2023</span>
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-surface-variant text-primary px-3 py-1 rounded-full text-xs uppercase font-bold">Logística Colaborativa</span>
+<span class="text-on-surface-variant text-sm">Región del Valle y Costa</span>
 </div>
-<h1 class="font-display text-display mb-stack-md tracking-tighter">Pata-Cargo</h1>
-<p class="text-on-surface-variant text-body-lg max-w-2xl mb-stack-lg">
-                        Una plataforma de automatización logística de nivel empresarial diseñada para sincronizar los movimientos de la cadena de suministro global utilizando telemetría en tiempo real y modelado de IA predictiva.
+<h1 class="text-5xl font-bold mb-6 tracking-tighter">Pata-Cargo</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mb-8">
+                        No es una empresa de transporte, es una red de ayuda mutua. Conecta a vecinos que necesitan realizar un envío con personas que ya tienen planeado viajar entre nuestras ciudades.
                     </p>
-<div class="flex flex-wrap gap-2 mb-stack-lg"><span class="bg-surface-container-low border border-outline-variant/30 text-on-surface px-3 py-1 rounded text-body-sm font-mono">Kotlin</span><span class="bg-surface-container-low border border-outline-variant/30 text-on-surface px-3 py-1 rounded text-body-sm font-mono">Android</span><span class="bg-surface-container-low border border-outline-variant/30 text-on-surface px-3 py-1 rounded text-body-sm font-mono">Logistics API</span></div>
-<div class="flex gap-stack-md">
-<a class="flex items-center gap-2 bg-primary text-on-primary-fixed px-6 py-3 rounded font-label-caps text-label-caps hover:opacity-90 transition-all" href="#">
-<span class="material-symbols-outlined">rocket_launch</span>
-                            Demo en Vivo
-                        </a>
-<a class="flex items-center gap-2 border border-outline-variant text-on-surface px-6 py-3 rounded font-label-caps text-label-caps hover:bg-surface-container-high transition-all" href="#">
-<span class="material-symbols-outlined">code</span>
-                            Repositorio
-                        </a>
+<div class="flex gap-4">
+<a class="flex items-center gap-2 bg-primary text-black px-6 py-3 rounded font-bold hover:opacity-90 transition-all" href="https://github.com/roanicolasrw-cmyk/Pata-Cargo" target="_blank">
+<span class="material-symbols-outlined">code</span> Ver Repositorio
+</a>
 </div>
 </div>
-<div class="w-full md:w-1/3 aspect-video md:aspect-square rounded-xl overflow-hidden border border-outline-variant/30 bg-surface-container">
-<img class="w-full h-full object-cover" alt="Pata-Cargo Dashboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6u9mg3789zmY3_mRWiG7iYmqa-GDRhJwdXsaBrCgzP0hdFGMhQ9BSYAAONet6OijyxvnaJBWUFq9pkeCE2lzgnnCjEmkiQKrrgUYHLNehsu2loudkm5ybBRKckXn6PtFmOVovzUPZyQi4JNd_nH34DxvRsGhr03L7yOIBCSWt5M7wbGYFxG9E4nZ1BMpr7iudbaSzVMzVFvP7ykpED-Mq_hqNfy-E-CWIRBjHg4iEh0mqW81j1cmw"/>
+<div class="w-full md:w-1/2 min-h-[300px] map-container">
+    <!-- Visual representation of the regional connection -->
+    <div class="relative h-full w-full min-h-[250px]">
+        <!-- Rawson -->
+        <div class="city-dot" style="top: 60%; left: 70%;"></div>
+        <div class="city-label" style="top: 65%; left: 70%;">Rawson</div>
+
+        <!-- Trelew -->
+        <div class="city-dot" style="top: 55%; left: 55%;"></div>
+        <div class="city-label" style="top: 48%; left: 55%;">Trelew</div>
+
+        <!-- Madryn -->
+        <div class="city-dot" style="top: 20%; left: 65%;"></div>
+        <div class="city-label" style="top: 15%; left: 65%;">Puerto Madryn</div>
+
+        <!-- Gaiman -->
+        <div class="city-dot" style="top: 50%; left: 35%;"></div>
+        <div class="city-label" style="top: 55%; left: 25%;">Gaiman</div>
+
+        <!-- Connectors -->
+        <div class="connector" style="width: 15%; top: 58%; left: 56%; transform: rotate(15deg);"></div> <!-- RW-TW -->
+        <div class="connector" style="width: 40%; top: 38%; left: 58%; transform: rotate(-75deg);"></div> <!-- TW-PM -->
+        <div class="connector" style="width: 20%; top: 53%; left: 36%; transform: rotate(10deg);"></div> <!-- TW-GAI -->
+    </div>
 </div>
 </div>
 </section>
-<!-- Project Content Grid -->
-<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-stack-lg">
-<!-- README Main Column -->
-<article class="lg:col-span-8 bg-surface-container-low border border-outline-variant/20 rounded-xl p-stack-lg shadow-xl">
-<div class="readme-content">
-    <h2>Descripción General</h2>
-    <p>Pata-Cargo es una solución integral para la gestión de envíos colaborativos. Permite conectar transportistas con clientes de manera eficiente, optimizando rutas y tiempos de entrega.</p>
-    <h2>Características Principales</h2>
-    <ul>
-        <li>Seguimiento en tiempo real mediante GPS.</li>
-        <li>Algoritmos de optimización de carga.</li>
-        <li>Integración con pasarelas de pago locales.</li>
-        <li>Panel de administración para gestión de flotas.</li>
-    </ul>
-</div>
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<article class="bg-surface-variant/20 border border-outline-variant/20 rounded-xl p-12 shadow-xl">
+<h2 class="text-3xl font-bold mb-8">Concepto del Proyecto</h2>
+<p class="text-on-surface-variant text-lg mb-6">
+                        Pata-Cargo optimiza los viajes que ya ocurren en nuestra región. Si alguien viaja de Rawson a Puerto Madryn por trabajo o trámites, puede aprovechar el espacio disponible en su vehículo para llevar un paquete de un vecino, reduciendo costos y fortaleciendo el vínculo comunitario.
+                    </p>
+<h3 class="text-2xl font-bold mb-4">¿Cómo funciona?</h3>
+<ul class="list-disc list-inside text-on-surface-variant space-y-2 mb-8">
+    <li>**Viajeros:** Publican su trayecto y disponibilidad de carga.</li>
+    <li>**Remitentes:** Buscan viajeros que coincidan con su ruta (Rawson, Trelew, Madryn, Gaiman).</li>
+    <li>**Conexión:** Acuerdo directo entre partes para la entrega.</li>
+    <li>**Impacto:** Menos vehículos circulando, mayor eficiencia regional.</li>
+</ul>
 </article>
-<!-- Sidebar Info -->
-<aside class="lg:col-span-4 space-y-stack-lg">
-<!-- Specs Card -->
-<div class="bg-surface-container border border-outline-variant/30 rounded-xl p-stack-md">
-<h3 class="font-headline-md text-headline-md mb-stack-md">Especificaciones</h3>
-<div class="space-y-stack-md">
-<div class="flex justify-between items-center border-b border-outline-variant/10 pb-2">
-<span class="text-on-surface-variant font-label-caps text-label-caps">Estado</span>
-<span class="text-primary font-mono text-body-sm">V2.4 Estable</span>
-</div>
-<div class="flex justify-between items-center border-b border-outline-variant/10 pb-2">
-<span class="text-on-surface-variant font-label-caps text-label-caps">Rol</span>
-<span class="text-on-surface font-mono text-body-sm">Arquitecto Principal</span>
-</div>
-<div class="flex justify-between items-center border-b border-outline-variant/10 pb-2">
-<span class="text-on-surface-variant font-label-caps text-label-caps">Duración</span>
-<span class="text-on-surface font-mono text-body-sm">8 Meses</span>
-</div>
-<div class="flex justify-between items-center">
-<span class="text-on-surface-variant font-label-caps text-label-caps">Licencia</span>
-<span class="text-on-surface font-mono text-body-sm">MIT</span>
-</div>
-</div>
-</div>
-<!-- Media Preview -->
-<div class="bg-surface-container border border-outline-variant/30 rounded-xl overflow-hidden group">
-<div class="relative aspect-video">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Server Rack" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbYzllqOXp3EO5cyPTtTrNhGb0bpxGeVAtFbs7UopVhkDDu8xdQ-pbYpFd4Li_C8Wff6yKqZCEqmArnCmq1rNlK0CpjibJfBsdQbjrel2Y9VlPkGE61hTA57KJD1KCEJmN_yV9H-ug-UU5RC8V9CsrVeRmYNeF3x5QfetWuw9BGtHAq9964Z6LxQb4mZkXiAJk1nQhsLfiEyCyAPX8wKcuntMYL62by7SXw1HnXJvGFo94zxxulJvH"/>
-</div>
-<div class="p-stack-md">
-<h4 class="font-headline-md text-headline-md mb-2">Video de Recorrido</h4>
-<p class="text-body-sm text-on-surface-variant">Una inmersión técnica de 5 minutos en la arquitectura principal de la plataforma.</p>
-</div>
-</div>
-</aside>
 </div>
 </main>
-<!-- Footer -->
-<footer class="w-full py-stack-lg border-t border-outline-variant/20 bg-surface-container-lowest">
-<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-stack-md">
-<div class="font-headline-md text-headline-md font-bold text-on-surface">Nicolás Roa</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Nicolás Roa. Built for high-performance innovation.</p>
-<div class="flex gap-stack-md">
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">LinkedIn</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">GitHub</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Twitter</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-caps text-label-caps" href="#">Email</a>
-</div>
+<footer class="w-full py-8 border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<p class="text-sm text-on-surface-variant">© 2024 Nicolás Roa. Conectando nuestra región.</p>
 </div>
 </footer>
-<script>
-        // Micro-interactions
-        document.querySelectorAll('button, a').forEach(el => {
-            el.addEventListener('mousedown', () => {
-                el.style.transform = 'scale(0.97)';
-            });
-            el.addEventListener('mouseup', () => {
-                el.style.transform = '';
-            });
-            el.addEventListener('mouseleave', () => {
-                el.style.transform = '';
-            });
-        });
-    </script>
 </body></html>
