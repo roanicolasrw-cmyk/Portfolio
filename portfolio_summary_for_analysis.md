@@ -1,0 +1,875 @@
+# Resumen del Portfolio para Análisis de IA
+
+Este documento contiene la estructura y el código completo del portfolio profesional de Nicolás Roa. Está diseñado para ser compartido con ChatGPT para recibir un análisis detallado sobre diseño, accesibilidad, SEO y contenido.
+
+## 1. Información General
+- **Propietario:** Nicolás Roa
+- **Especialidad:** Consultor Senior de Tecnología (IA, Transformación Digital, Web Dev)
+- **Tecnologías principales:** Tailwind CSS, JavaScript (Vanilla), HTML5 Semántico.
+- **Enfoque:** Minimalismo, alto impacto visual y profesionalismo.
+- **Ubicación:** Chubut, Argentina.
+
+## 2. Estructura de Archivos
+- `index.html`: Página principal con secciones de Home, Experiencia, Proyectos, Servicios y Contacto.
+- `pata-cargo.html`: Detalle del proyecto de logística colaborativa.
+- `csemal.html`: Detalle del sistema de match solidario comunitario.
+- `printbot.html`: Detalle del proyecto de automatización de impresión.
+- `vercel.json`: Configuración de URLs limpias para el despliegue.
+
+---
+
+## 3. Código Fuente Principal
+
+### index.html
+```html
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nicolás Roa | Tecnología, IA y Transformación Digital</title>
+<meta content="Profesional tecnológico especializado en transformación digital, automatización con IA y desarrollo de soluciones tecnológicas de alto impacto." name="description">
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#343535",
+                    "on-tertiary-fixed-variant": "#723600",
+                    "on-surface": "#e3e2e2",
+                    "tertiary": "#ffb786",
+                    "on-secondary-container": "#b7b4b4",
+                    "on-tertiary-container": "#461f00",
+                    "outline": "#8c909f",
+                    "on-primary-container": "#00285d",
+                    "primary-fixed-dim": "#adc6ff",
+                    "surface-container-highest": "#343535",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#001a42",
+                    "surface-container-lowest": "#0d0e0f",
+                    "primary": "#adc6ff",
+                    "secondary-fixed": "#e5e2e1",
+                    "tertiary-container": "#df7412",
+                    "on-secondary": "#313030",
+                    "tertiary-fixed": "#ffdcc6",
+                    "surface-dim": "#121414",
+                    "on-tertiary-fixed": "#311400",
+                    "primary-container": "#4d8eff",
+                    "inverse-on-surface": "#2f3131",
+                    "secondary-container": "#474746",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "inverse-surface": "#e3e2e2",
+                    "surface": "#121414",
+                    "on-surface-variant": "#c2c6d6",
+                    "on-primary-fixed-variant": "#004395",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed-variant": "#474746",
+                    "primary-fixed": "#d8e2ff",
+                    "on-primary": "#002e6a",
+                    "surface-container-low": "#1a1c1c",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed-dim": "#ffb786",
+                    "secondary": "#c8c6c5",
+                    "inverse-primary": "#005ac2",
+                    "surface-container-high": "#292a2a",
+                    "on-tertiary": "#502400",
+                    "on-background": "#e3e2e2",
+                    "outline-variant": "#424754",
+                    "background": "#121414",
+                    "surface-container": "#1e2020",
+                    "surface-bright": "#38393a",
+                    "on-error": "#690005",
+                    "on-error-container": "#ffdad6",
+                    "surface-tint": "#adc6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "container-max": "1200px",
+                    "stack-md": "16px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "margin-desktop": "40px",
+                    "unit": "4px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Geist", "Inter", "sans-serif"],
+                    "headline-lg": ["Geist", "Inter", "sans-serif"],
+                    "mono": ["jetbrainsMono", "monospace"],
+                    "body-lg": ["Geist", "Inter", "sans-serif"],
+                    "label-caps": ["Geist", "Inter", "sans-serif"],
+                    "headline-lg-mobile": ["Geist", "Inter", "sans-serif"],
+                    "body-sm": ["Geist", "Inter", "sans-serif"],
+                    "display": ["Geist", "Inter", "sans-serif"]
+            },
+            "fontSize": {
+                    "headline-md": ["20px", {"lineHeight": "1.4", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "600"}],
+                    "mono": ["13px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #121414;
+            color: #e3e2e2;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(18, 20, 20, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(66, 71, 84, 0.3);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(173, 198, 255, 0.05) 0%, transparent 70%);
+        }
+        .timeline-line {
+            background: linear-gradient(to bottom, #adc6ff 0%, #424754 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="font-body-lg text-body-lg">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30 dark:border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-16">
+<span class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface dark:text-on-surface">Nicolás Roa</span>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-caps text-label-caps text-primary dark:text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="#home">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors" href="#experience">Experiencia</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors" href="#projects">Proyectos</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors" href="#services">Servicios</a>
+<a class="px-stack-md py-stack-sm bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-all active:scale-95" href="#contact">Contactame</a>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="relative">
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center relative pt-20 overflow-hidden hero-gradient" id="home">
+
+<div class="max-w-container-max mx-auto px-margin-desktop w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-8 flex flex-col gap-stack-lg">
+<div class="inline-flex items-center gap-stack-sm px-stack-md py-stack-sm rounded-full bg-surface-container border border-outline-variant/30 w-fit">
+<span class="material-symbols-outlined text-primary text-sm">settings_suggest</span>
+<span class="font-label-caps text-label-caps text-primary">Consultor Senior de Tecnología</span>
+</div>
+<h1 class="font-display text-display text-on-surface max-w-4xl transition-all duration-700 opacity-100 translate-y-0">
+                        Transformación digital, <span class="text-primary">Estrategia Tecnológica</span> y desarrollo de soluciones.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                        Profesional tecnológico con experiencia en gestión pública, educación digital, automatización de procesos y desarrollo de soluciones utilizando tecnologías modernas.
+                    </p>
+<div class="flex flex-wrap gap-stack-md mt-4">
+<a class="px-stack-lg py-4 bg-primary text-on-primary font-label-caps text-label-caps rounded-xl hover:shadow-[0_0_20px_rgba(173,198,255,0.3)] transition-all" href="#projects">Ver proyectos</a>
+<a class="px-stack-lg py-4 bg-surface-container-high border border-outline-variant/30 text-on-surface font-label-caps text-label-caps rounded-xl hover:bg-surface-variant transition-all" href="CV_Nicolas_.pdf" download>Descargar CV</a>
+<a class="px-stack-lg py-4 text-on-surface font-label-caps text-label-caps flex items-center gap-stack-sm hover:underline" href="#contact">Contactar <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Bento Grid -->
+<section class="py-stack-lg max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 glass-card rounded-xl p-8 flex flex-col justify-between transition-all duration-700 opacity-100 translate-y-0">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-stack-md">Ecosistema de Innovación</h3>
+<p class="text-on-surface-variant leading-relaxed mb-stack-lg">
+                            Líder en Transformación Digital con más de 15 años impulsando la modernización del sector público y educativo en la Patagonia. Mi misión es cerrar la brecha tecnológica mediante soluciones que combinan diseño estratégico y arquitectura de software robusta, centradas siempre en el impacto ciudadano.
+                        </p>
+</div>
+<div class="flex gap-gutter">
+<div class="flex flex-col">
+<span class="font-headline-lg text-primary">15+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Años exp.</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-primary">RW-CH</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Ubicación</span>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl p-4 transition-all duration-700 opacity-100 translate-y-0">
+<div class="w-full h-full overflow-hidden rounded-lg relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Nicolás Roa" src="perfil.png">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-40"></div>
+<div class="absolute bottom-4 left-4">
+<span class="font-label-caps text-label-caps text-on-surface">Nicolás Roa</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Timeline -->
+<section class="py-stack-lg bg-surface-container-lowest" id="experience">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 transition-all duration-700 opacity-100 translate-y-0">Trayectoria Profesional</h2>
+<div class="relative pl-8 md:pl-0">
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px timeline-line"></div>
+<!-- Item 1 -->
+<div class="relative mb-12 md:flex md:justify-between items-center w-full">
+<div class="md:w-[45%] md:text-right">
+<span class="font-mono text-primary text-sm mb-2 block">2017 - Presente</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Docente e Implementador de Tecnología</h4>
+<p class="text-on-surface-variant font-label-caps text-label-caps">Escuela N° 2702 - Rawson</p>
+<p class="mt-stack-sm text-body-sm text-on-surface-variant">Liderando la integración de herramientas digitales en el currículo educativo y la modernización tecnológica del establecimiento.</p>
+</div>
+<div class="absolute left-[-33px] md:left-1/2 md:translate-x-[-50%] w-4 h-4 rounded-full bg-primary border-4 border-background z-10"></div>
+<div class="hidden md:block md:w-[45%]"></div>
+</div>
+<!-- Item 2 -->
+<div class="relative mb-12 md:flex md:justify-between items-center w-full">
+<div class="hidden md:block md:w-[45%]"></div>
+<div class="absolute left-[-33px] md:left-1/2 md:translate-x-[-50%] w-4 h-4 rounded-full bg-outline border-4 border-background z-10"></div>
+<div class="md:w-[45%]">
+<span class="font-mono text-primary text-sm mb-2 block">2020 - 2022</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Capacitador y Soporte Técnico</h4>
+<p class="text-on-surface-variant font-label-caps text-label-caps">Ministerio de Educación - Chubut</p>
+<ul class="mt-stack-sm text-body-sm text-on-surface-variant list-none">
+    <li>• Capacitación virtual a +2.500 docentes en plataformas digitales.</li>
+    <li>• Implementación Plan Chubut EDUCA durante la Pandemia.</li>
+    <li>• Soporte técnico especializado en programas educativos provinciales.</li>
+</ul>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative mb-12 md:flex md:justify-between items-center w-full">
+<div class="md:w-[45%] md:text-right">
+<span class="font-mono text-primary text-sm mb-2 block">2012 - 2019</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Director de Modernización</h4>
+<p class="text-on-surface-variant font-label-caps text-label-caps">Municipalidad de Rawson</p>
+<ul class="mt-stack-sm text-body-sm text-on-surface-variant list-none">
+    <li>• Implementación SUBE: +12.000 tarjetas activadas.</li>
+    <li>• Registro Digital Social: +3.500 beneficiarios.</li>
+    <li>• Núcleo de Acceso al Conocimiento (NAC): +500 capacitaciones.</li>
+</ul>
+</div>
+<div class="absolute left-[-33px] md:left-1/2 md:translate-x-[-50%] w-4 h-4 rounded-full bg-outline border-4 border-background z-10"></div>
+<div class="hidden md:block md:w-[45%]"></div>
+</div>
+<!-- Item 3 -->
+<div class="relative md:flex md:justify-between items-center w-full">
+<div class="md:w-[45%] md:text-right">
+<span class="font-mono text-primary text-sm mb-2 block">2007 - 2010</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Tutor E-learning</h4>
+<p class="text-on-surface-variant font-label-caps text-label-caps">Proyectos Educativos Digitales</p>
+<p class="mt-stack-sm text-body-sm text-on-surface-variant">Gestión de plataformas de aprendizaje a distancia y soporte técnico-pedagógico para entornos virtuales.</p>
+</div>
+<div class="absolute left-[-33px] md:left-1/2 md:translate-x-[-50%] w-4 h-4 rounded-full bg-outline border-4 border-background z-10"></div>
+<div class="hidden md:block md:w-[45%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Grid -->
+<section class="py-stack-lg" id="projects">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-stack-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface transition-all duration-700 opacity-100 translate-y-0">Proyectos Destacados</h2>
+<p class="text-on-surface-variant mt-2">Soluciones reales para problemas complejos.</p>
+</div>
+<div class="flex gap-stack-sm">
+<span class="px-stack-md py-1 rounded-full border border-primary text-primary font-label-caps text-[10px]">WEB DEV</span>
+<span class="px-stack-md py-1 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px]">AI AUTOMATION</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter"><!-- Project 1: Pata-Cargo -->
+<div class="glass-card rounded-xl overflow-hidden group transition-all duration-700 opacity-100 translate-y-0">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Pata-Cargo Conducción" src="Pata-cargo.jpg">
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Pata-Cargo</h3>
+<p class="text-body-sm text-on-surface-variant mb-4">Logística colaborativa regional. Conecta personas que necesitan enviar algo con viajeros que ya realizan el trayecto entre Rawson, Trelew, Madryn y Gaiman.</p>
+<div class="flex gap-2 flex-wrap mb-4">
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-mono">Movilidad Colaborativa</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-mono">Chubut</span>
+</div>
+<a class="inline-flex items-center gap-1 text-primary text-sm font-label-caps" href="pata-cargo.html">Ver detalle <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+<!-- Project 2: Printbot -->
+<div class="glass-card rounded-xl overflow-hidden group transition-all duration-700 opacity-100 translate-y-0">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="PrintBot System" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800">
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Printbot</h3>
+<p class="text-body-sm text-on-surface-variant mb-4">Automatización de flujos de impresión y gestión de colas remotas mediante herramientas digitales eficientes.</p>
+<div class="flex gap-2 flex-wrap mb-4">
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-mono">JavaScript</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-mono">Node.js</span>
+</div>
+<a class="inline-flex items-center gap-1 text-primary text-sm font-label-caps" href="printbot.html">Ver detalle <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+<!-- Project 3: CSEMAL -->
+<div class="glass-card rounded-xl overflow-hidden group transition-all duration-700 opacity-100 translate-y-0">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="CSEMAL Colaboración Humana" src="csemal.jpg">
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">CSEMAL</h3>
+<p class="text-body-sm text-on-surface-variant mb-4">Sistema de Match comunitario. Conecta objetos disponibles con personas que los necesitan en Rawson.</p>
+<div class="flex gap-2 flex-wrap mb-4">
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-mono">Comunidad</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded text-[10px] font-mono">Rawson</span>
+</div>
+<a class="inline-flex items-center gap-1 text-primary text-sm font-label-caps" href="csemal.html">Ver detalle <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div></div>
+</div>
+</section>
+<!-- Tech Stack -->
+<section class="py-stack-lg bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface transition-all duration-700 opacity-100 translate-y-0">Stack Tecnológico</h2>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Category 1 -->
+<div class="flex flex-col gap-stack-md">
+<h4 class="font-label-caps text-label-caps text-primary border-b border-primary/20 pb-2">Frontend</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">React</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">Next.js</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">TypeScript</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">Tailwind</span>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="flex flex-col gap-stack-md">
+<h4 class="font-label-caps text-label-caps text-primary border-b border-primary/20 pb-2">Backend</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">Firebase</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">REST APIs</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">Node.js</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">SQL</span>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="flex flex-col gap-stack-md">
+<h4 class="font-label-caps text-label-caps text-primary border-b border-primary/20 pb-2">AI &amp; Automatización</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">ChatGPT</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">Gemini</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">n8n</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">Make</span>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="flex flex-col gap-stack-md">
+<h4 class="font-label-caps text-label-caps text-primary border-b border-primary/20 pb-2">Herramientas</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">GitHub</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">Docker</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">Figma</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs border border-outline-variant/30">Postman</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services -->
+<section class="py-stack-lg" id="services">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12 text-center transition-all duration-700 opacity-100 translate-y-0">Servicios Profesionales</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="p-8 glass-card rounded-2xl hover:border-primary/50 transition-colors group transition-all duration-700 opacity-100 translate-y-0">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">bolt</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Procesos Eficientes</h4>
+<p class="text-body-sm text-on-surface-variant">Diseño e implementación de flujos de trabajo inteligentes y automatización estratégica.</p>
+</div>
+<div class="p-8 glass-card rounded-2xl hover:border-primary/50 transition-colors group transition-all duration-700 opacity-100 translate-y-0">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">code</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Web Development</h4>
+<p class="text-body-sm text-on-surface-variant">Desarrollo de aplicaciones robustas con foco en performance y accesibilidad.</p>
+</div>
+<div class="p-8 glass-card rounded-2xl hover:border-primary/50 transition-colors group transition-all duration-700 opacity-100 translate-y-0">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">sync</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Digital Transformation</h4>
+<p class="text-body-sm text-on-surface-variant">Modernización de procesos públicos y corporativos mediante tecnología.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-stack-lg relative" id="contact">
+
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-20 relative z-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 transition-all duration-700 opacity-100 translate-y-0">Contacto</h2>
+<p class="text-on-surface-variant mb-12">¿Tienes alguna consulta o proyecto en mente? No dudes en escribirme.</p>
+<div class="space-y-8">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Email</p>
+<p class="text-on-surface">roanicolasrw@gmail.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Ubicación</p>
+<p class="text-on-surface">Chubut, Argentina</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-8 transition-all duration-700 opacity-100 translate-y-0">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant" for="name">Nombre</label>
+<input class="bg-surface-container-low border border-outline-variant/30 rounded-lg p-3 text-on-surface focus:border-primary focus:ring-0 outline-none transition-all" id="name" type="text" name="name">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant" for="email">Email</label>
+<input class="bg-surface-container-low border border-outline-variant/30 rounded-lg p-3 text-on-surface focus:border-primary focus:ring-0 outline-none transition-all" id="email" type="email" name="email">
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant" for="subject">Asunto</label>
+<input class="bg-surface-container-low border border-outline-variant/30 rounded-lg p-3 text-on-surface focus:border-primary focus:ring-0 outline-none transition-all" id="subject" type="text" name="subject">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant" for="message">Mensaje</label>
+<textarea class="bg-surface-container-low border border-outline-variant/30 rounded-lg p-3 text-on-surface focus:border-primary focus:ring-0 outline-none transition-all" id="message" rows="4" name="message"></textarea>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-label-caps text-label-caps rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-2" type="submit">
+                            Enviar Mensaje <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-stack-lg border-t border-outline-variant/20 dark:border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Nicolás Roa</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 text-center md:text-left max-w-xs">
+                    © 2025 Nicolás Roa
+                </p>
+</div>
+<div class="flex gap-stack-lg">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="https://www.linkedin.com/in/nicolas-roa-rw/" target="_blank">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="https://github.com/roanicolasrw-cmyk" target="_blank">GitHub</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="mailto:roanicolasrw@gmail.com">Email</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card, h2, h1').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
+```
+
+### pata-cargo.html
+```html
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detalle del Proyecto | Pata-Cargo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#343535",
+                    "on-surface": "#e3e2e2",
+                    "primary": "#adc6ff",
+                    "background": "#121414",
+                    "outline-variant": "#424754"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "40px",
+                    "container-max": "1200px"
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #000000; color: #e3e2e2; -webkit-font-smoothing: antialiased; }
+        .glass-nav { backdrop-filter: blur(12px); background: rgba(0, 0, 0, 0.7); }
+        .hero-glow { background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 70%); }
+        .map-container {
+            position: relative;
+            background: #1a1c1c;
+            border-radius: 1rem;
+            padding: 2rem;
+            overflow: hidden;
+            border: 1px solid rgba(173, 198, 255, 0.1);
+        }
+        .city-dot {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #adc6ff;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #adc6ff;
+        }
+        .city-label {
+            position: absolute;
+            color: #adc6ff;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .connector {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, #adc6ff, transparent);
+            height: 2px;
+            opacity: 0.3;
+            animation: pulse 3s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 0.1; }
+        }
+    </style>
+</head>
+<body class="font-sans">
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-16">
+<div class="text-xl font-bold tracking-tighter text-on-surface">Nicolás Roa</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-sm uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Inicio</a>
+<a class="text-sm uppercase tracking-widest text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="index.html#projects">Proyectos</a>
+</nav>
+</div>
+</header>
+<main class="pt-32 pb-16">
+<section class="max-w-container-max mx-auto px-margin-desktop mb-24 hero-glow">
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<div class="flex-1">
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-surface-variant text-primary px-3 py-1 rounded-full text-xs uppercase font-bold">Logística Colaborativa</span>
+<span class="text-on-surface-variant text-sm">Región del Valle y Costa</span>
+</div>
+<h1 class="text-5xl font-bold mb-6 tracking-tighter">Pata-Cargo</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mb-8">
+                        No es una empresa de transporte, es una red de ayuda mutua. Conecta a vecinos que necesitan realizar un envío con personas que ya tienen planeado viajar entre nuestras ciudades.
+                    </p>
+<div class="flex gap-4">
+<a class="flex items-center gap-2 bg-primary text-black px-6 py-3 rounded font-bold hover:opacity-90 transition-all" href="https://github.com/roanicolasrw-cmyk/Pata-Cargo" target="_blank">
+<span class="material-symbols-outlined">code</span> Ver Repositorio
+</a>
+</div>
+</div>
+<div class="w-full md:w-1/2 min-h-[300px] map-container">
+    <!-- Visual representation of the regional connection -->
+    <div class="relative h-full w-full min-h-[250px]">
+        <!-- Rawson -->
+        <div class="city-dot" style="top: 60%; left: 70%;"></div>
+        <div class="city-label" style="top: 65%; left: 70%;">Rawson</div>
+
+        <!-- Trelew -->
+        <div class="city-dot" style="top: 55%; left: 55%;"></div>
+        <div class="city-label" style="top: 48%; left: 55%;">Trelew</div>
+
+        <!-- Madryn -->
+        <div class="city-dot" style="top: 20%; left: 65%;"></div>
+        <div class="city-label" style="top: 15%; left: 65%;">Puerto Madryn</div>
+
+        <!-- Gaiman -->
+        <div class="city-dot" style="top: 50%; left: 35%;"></div>
+        <div class="city-label" style="top: 55%; left: 25%;">Gaiman</div>
+
+        <!-- Connectors -->
+        <div class="connector" style="width: 15%; top: 58%; left: 56%; transform: rotate(15deg);"></div> <!-- RW-TW -->
+        <div class="connector" style="width: 40%; top: 38%; left: 58%; transform: rotate(-75deg);"></div> <!-- TW-PM -->
+        <div class="connector" style="width: 20%; top: 53%; left: 36%; transform: rotate(10deg);"></div> <!-- TW-GAI -->
+    </div>
+</div>
+</div>
+</section>
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<article class="bg-surface-variant/20 border border-outline-variant/20 rounded-xl p-12 shadow-xl">
+<h2 class="text-3xl font-bold mb-8">Concepto del Proyecto</h2>
+<p class="text-on-surface-variant text-lg mb-6">
+                        Pata-Cargo optimiza los viajes que ya ocurren en nuestra región. Si alguien viaja de Rawson a Puerto Madryn por trabajo o trámites, puede aprovechar el espacio disponible en su vehículo para llevar un paquete de un vecino, reduciendo costos y fortaleciendo el vínculo comunitario.
+                    </p>
+<h3 class="text-2xl font-bold mb-4">¿Cómo funciona?</h3>
+<ul class="list-disc list-inside text-on-surface-variant space-y-2 mb-8">
+    <li>**Viajeros:** Publican su trayecto y disponibilidad de carga.</li>
+    <li>**Remitentes:** Buscan viajeros que coincidan con su ruta (Rawson, Trelew, Madryn, Gaiman).</li>
+    <li>**Conexión:** Acuerdo directo entre partes para la entrega.</li>
+    <li>**Impacto:** Menos vehículos circulando, mayor eficiencia regional.</li>
+</ul>
+</article>
+</div>
+</main>
+<footer class="w-full py-8 border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<p class="text-sm text-on-surface-variant">© 2025 Nicolás Roa</p>
+</div>
+</footer>
+</body></html>
+```
+
+### csemal.html
+```html
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detalle del Proyecto | CSEMAL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#343535",
+                    "on-surface": "#e3e2e2",
+                    "primary": "#adc6ff",
+                    "background": "#121414",
+                    "outline-variant": "#424754"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "40px",
+                    "container-max": "1200px"
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #000000; color: #e3e2e2; -webkit-font-smoothing: antialiased; }
+        .glass-nav { backdrop-filter: blur(12px); background: rgba(0, 0, 0, 0.7); }
+        .hero-glow { background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 70%); }
+    </style>
+</head>
+<body class="font-sans">
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-16">
+<div class="text-xl font-bold tracking-tighter text-on-surface">Nicolás Roa</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-sm uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Inicio</a>
+<a class="text-sm uppercase tracking-widest text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="index.html#projects">Proyectos</a>
+</nav>
+</div>
+</header>
+<main class="pt-32 pb-16">
+<section class="max-w-container-max mx-auto px-margin-desktop mb-24 hero-glow">
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<div class="flex-1">
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-surface-variant text-primary px-3 py-1 rounded-full text-xs uppercase font-bold">Impacto Social</span>
+<span class="text-on-surface-variant text-sm">Comunidad Rawson</span>
+</div>
+<h1 class="text-5xl font-bold mb-6 tracking-tighter">CSEMAL</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mb-8">
+                        Un sistema de "Match" solidario diseñado para unir objetos disponibles con personas que los necesitan en la comunidad de Rawson. Una herramienta digital para potenciar la economía circular y la ayuda mutua.
+                    </p>
+<div class="flex gap-4">
+<a class="flex items-center gap-2 bg-primary text-black px-6 py-3 rounded font-bold hover:opacity-90 transition-all" href="https://github.com/roanicolasrw-cmyk/CSEMAL" target="_blank">
+<span class="material-symbols-outlined">code</span> Ver Repositorio
+</a>
+</div>
+</div>
+<div class="w-full md:w-1/3 aspect-video rounded-xl overflow-hidden border border-outline-variant/30 bg-surface-variant">
+<img class="w-full h-full object-cover" alt="CSEMAL Match Solidario" src="csemal.jpg"/>
+</div>
+</div>
+</section>
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<article class="bg-surface-variant/20 border border-outline-variant/20 rounded-xl p-12 shadow-xl">
+<h2 class="text-3xl font-bold mb-8">Propósito del Proyecto</h2>
+<p class="text-on-surface-variant text-lg mb-6">
+                        CSEMAL funciona como un puente tecnológico en Rawson. El sistema permite registrar donaciones o artículos disponibles y, mediante un algoritmo de coincidencia, los conecta con solicitudes de personas o instituciones que presentan esa necesidad específica.
+                    </p>
+<h3 class="text-2xl font-bold mb-4">Ejes Principales</h3>
+<ul class="list-disc list-inside text-on-surface-variant space-y-2 mb-8">
+    <li>Gestión eficiente de recursos comunitarios.</li>
+    <li>Interfaz simplificada para usuarios de todas las edades.</li>
+    <li>Fomento de la economía circular local.</li>
+    <li>Transparencia en el proceso de match y entrega.</li>
+</ul>
+</article>
+</div>
+</main>
+<footer class="w-full py-8 border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<p class="text-sm text-on-surface-variant">© 2025 Nicolás Roa</p>
+</div>
+</footer>
+</body></html>
+```
+
+### printbot.html
+```html
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detalle del Proyecto | Printbot</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#343535",
+                    "on-surface": "#e3e2e2",
+                    "primary": "#adc6ff",
+                    "background": "#121414",
+                    "outline-variant": "#424754"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "40px",
+                    "container-max": "1200px"
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #000000; color: #e3e2e2; -webkit-font-smoothing: antialiased; }
+        .glass-nav { backdrop-filter: blur(12px); background: rgba(0, 0, 0, 0.7); }
+        .hero-glow { background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 70%); }
+    </style>
+</head>
+<body class="font-sans">
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-16">
+<div class="text-xl font-bold tracking-tighter text-on-surface">Nicolás Roa</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-sm uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors" href="index.html">Inicio</a>
+<a class="text-sm uppercase tracking-widest text-primary relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="index.html#projects">Proyectos</a>
+</nav>
+</div>
+</header>
+<main class="pt-32 pb-16">
+<section class="max-w-container-max mx-auto px-margin-desktop mb-24 hero-glow">
+<div class="flex flex-col md:flex-row gap-12 items-start">
+<div class="flex-1">
+<div class="flex items-center gap-4 mb-6">
+<span class="bg-surface-variant text-primary px-3 py-1 rounded-full text-xs uppercase font-bold">Bot Automation</span>
+<span class="text-on-surface-variant text-sm">JavaScript</span>
+</div>
+<h1 class="text-5xl font-bold mb-6 tracking-tighter">Printbot</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mb-8">
+                        Automatización inteligente de flujos de impresión remota. Printbot gestiona colas de impresión de forma autónoma, permitiendo enviar documentos desde cualquier lugar mediante una interfaz sencilla y eficiente.
+                    </p>
+<div class="flex gap-4">
+<a class="flex items-center gap-2 bg-primary text-black px-6 py-3 rounded font-bold hover:opacity-90 transition-all" href="https://github.com/roanicolasrw-cmyk/Printbot" target="_blank">
+<span class="material-symbols-outlined">code</span> Ver Repositorio
+</a>
+</div>
+</div>
+<div class="w-full md:w-1/3 aspect-square rounded-xl overflow-hidden border border-outline-variant/30 bg-surface-variant flex items-center justify-center relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Printbot WhatsApp Interface" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800">
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+    <div class="bg-primary/20 backdrop-blur-md p-4 rounded-lg border border-primary/30 text-primary text-xs font-mono">
+        > Print Job: OK [100%]
+    </div>
+</div>
+</div>
+</div>
+</section>
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<article class="bg-surface-variant/20 border border-outline-variant/20 rounded-xl p-12 shadow-xl">
+<h2 class="text-3xl font-bold mb-8">Sobre el Proyecto</h2>
+<p class="text-on-surface-variant text-lg mb-6">
+                        Printbot nació de la necesidad de simplificar la gestión de impresoras en red. Utilizando Node.js y diversas APIs de mensajería, el sistema permite que múltiples usuarios envíen documentos a una cola centralizada sin necesidad de configuraciones complejas de drivers en sus dispositivos personales.
+                    </p>
+<h3 class="text-2xl font-bold mb-4">Tecnologías Utilizadas</h3>
+<ul class="list-disc list-inside text-on-surface-variant space-y-2 mb-8">
+    <li>JavaScript / Node.js</li>
+    <li>Gestión de colas asíncronas</li>
+    <li>APIs de comunicación en tiempo real</li>
+    <li>Docker para despliegue simplificado</li>
+</ul>
+</article>
+</div>
+</main>
+<footer class="w-full py-8 border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<p class="text-sm text-on-surface-variant">© 2025 Nicolás Roa</p>
+</div>
+</footer>
+</body></html>
+```
+
+---
+
+## 4. Configuración de Despliegue (vercel.json)
+```json
+{
+  "cleanUrls": true
+}
+```
