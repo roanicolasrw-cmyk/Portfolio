@@ -4,7 +4,7 @@ Este documento contiene la estructura y el código completo del portfolio profes
 
 ## 1. Información General
 - **Propietario:** Nicolás Roa
-- **Especialidad:** Consultor Senior de Tecnología (IA, Transformación Digital, Web Dev)
+- **Especialidad:** Software Developer (IA, Transformación Digital, Web Dev)
 - **Tecnologías principales:** Tailwind CSS, JavaScript (Vanilla), HTML5 Semántico.
 - **Enfoque:** Minimalismo, alto impacto visual y profesionalismo.
 - **Ubicación:** Chubut, Argentina.
